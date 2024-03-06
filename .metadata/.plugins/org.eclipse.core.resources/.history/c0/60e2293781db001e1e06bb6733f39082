@@ -1,0 +1,60 @@
+package itemconsumer;
+
+import java.util.Scanner;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+import com.miti.ItemPublisher.ItemProcedure;
+
+public class ItemConsumerActivator implements BundleActivator {
+
+	ServiceReference serviceReference;
+	
+	
+	
+
+	public void start(BundleContext context) throws Exception {
+		System.out.println("Item Consumer bundle started.");
+		
+		
+		// Obtain a service reference for the ItemProcedure class
+		serviceReference = context.getServiceReference(ItemProcedure.class);
+
+		// Create an instance of ItemProcedure using the obtained service reference
+		ItemProcedure itemProducer = (ItemProcedure) context.getService(serviceReference);
+
+		// Initialize a Scanner object to read input from the console
+		Scanner sc = new Scanner(System.in);
+
+		// Set a boolean flag to control the loop
+		boolean running = true;
+
+		// Enter a loop that continues as long as the "running" flag is true
+		while (running) {
+		    // Display a menu of options for the user
+		    System.out.println("Choose an option:");
+		    System.out.println("1. View All Items");
+		    System.out.println("2. Add Item");
+		    System.out.println("3. Edit Item");
+		    System.out.println("4. Delete Item");
+		    System.out.println("5. Exit");
+		    System.out.print("Option: ");
+		    
+		    // Read the user's choice (an integer) from the console
+		    int option = sc.nextInt();
+		    
+		    switch(option) {
+		    case 1:
+		    	getAllItems(itemProducer);
+		    }
+		    
+		}
+	}
+
+	public void stop(BundleContext context) throws Exception {
+//		ItemConsumerActivator.context = null;
+	}
+
+}

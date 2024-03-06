@@ -1,0 +1,13 @@
+package com.miti.ItemPublisher;
+
+import java.util.List;
+
+import model.Item;
+
+public interface ItemProcedure {
+	
+	public String ItemProcedure();
+	
+	public List<Item> getAllItems();
+
+}

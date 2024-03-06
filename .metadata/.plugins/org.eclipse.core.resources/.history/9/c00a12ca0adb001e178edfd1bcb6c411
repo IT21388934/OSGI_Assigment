@@ -1,0 +1,7 @@
+package com.miti.ItemPublisher;
+
+public interface ItemProcedure {
+	
+	public String ItemProcedure();
+
+}

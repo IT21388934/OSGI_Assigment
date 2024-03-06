@@ -1,0 +1,10 @@
+package com.miti.ItemPublisher;
+
+public class ItemProcedureImp implements ItemProcedure {
+	
+	@Override
+	public String ItemProcedure() {
+		return "Execute the publish service of Item service ";
+	}
+
+}

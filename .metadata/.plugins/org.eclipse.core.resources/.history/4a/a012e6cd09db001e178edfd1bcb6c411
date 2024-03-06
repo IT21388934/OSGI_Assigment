@@ -1,0 +1,21 @@
+package com.miti.ItemPublisher;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+import org.osgi.framework.ServiceRegistration;
+
+public class ItemPublihserActivator implements BundleActivator {
+
+	ServiceRegistration serviceRegistration;
+
+	public void start(BundleContext context) throws Exception {
+		System.out.println("Start Item publisher servicce");
+//		serviceRegistration = context.registerService(, null, null)
+	}
+
+	public void stop(BundleContext context) throws Exception {
+		
+	}
+
+}

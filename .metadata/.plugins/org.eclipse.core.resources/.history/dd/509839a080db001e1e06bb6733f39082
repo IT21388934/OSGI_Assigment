@@ -1,0 +1,34 @@
+package itemconsumer;
+
+import java.util.Scanner;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+import com.miti.ItemPublisher.ItemProcedure;
+
+public class ItemConsumerActivator implements BundleActivator {
+
+	ServiceReference serviceReference;
+	
+	
+	
+
+	public void start(BundleContext context) throws Exception {
+		System.out.println("Item Consumer bundle started.");
+		
+		
+		serviceReference = context.getServiceReference(ItemProcedure.class);
+		ItemProcedure itemProducer = (ItemProcedure) context.getService(serviceReference);
+		
+		Scanner sc = new Scanner(System.in);
+		boolean running = true;
+		
+	}
+
+	public void stop(BundleContext context) throws Exception {
+//		ItemConsumerActivator.context = null;
+	}
+
+}
