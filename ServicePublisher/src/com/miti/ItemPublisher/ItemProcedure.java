@@ -2,7 +2,7 @@ package com.miti.ItemPublisher;
 
 import java.util.List;
 
-import model.Item;
+import com.mtit.model.Item;
 
 public interface ItemProcedure {
 	

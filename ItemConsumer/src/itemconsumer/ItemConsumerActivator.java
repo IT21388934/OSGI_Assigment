@@ -8,8 +8,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 
 import com.miti.ItemPublisher.ItemProcedure;
-
-import model.Item;
+import com.mtit.model.Item;
 
 public class ItemConsumerActivator implements BundleActivator {
 

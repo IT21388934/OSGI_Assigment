@@ -1,4 +1,4 @@
-package model;
+package com.mtit.model;
 
 public class Item {
 	

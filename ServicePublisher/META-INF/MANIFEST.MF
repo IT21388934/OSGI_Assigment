@@ -4,8 +4,9 @@ Bundle-Name: ServicePublisher
 Bundle-SymbolicName: ServicePublisher
 Bundle-Version: 1.0.0.qualifier
 Export-Package: com.miti.ItemPublisher,
- model
-Bundle-Activator: com.miti.ItemPublisher.ItemProcedureActivator
+ com.mtit.customerService,
+ com.mtit.model
+Bundle-Activator: com.mtit.activator.ServiceActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: ServicePublisher
 Import-Package: org.osgi.framework;version="1.3.0"
