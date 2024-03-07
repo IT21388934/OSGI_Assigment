@@ -17,7 +17,7 @@ public class ServiceActivator implements BundleActivator {
 	private static final int LIMIT = 10000;
 	private static int last = 0;
 
-	public void start(BundleContext bundleContext) throws Exception {
+	public void start(BundleContext bundleContext) {
 		System.out.println("Starting Customer Service Consumer");
 		serviceReference = bundleContext.getServiceReference(CustomerService.class.getName());
 		CustomerService customerService = (CustomerService) bundleContext.getService(serviceReference);
@@ -30,28 +30,33 @@ public class ServiceActivator implements BundleActivator {
 
 			type = scanner.nextLine();
 
-			switch (type) {
-			case "1": {
-				addCustomer(customerService);
-				break;
-			}
-			case "2": {
-				displayCustomers(customerService);
-				break;
-			}
-			case "3": {
-				displaySearchResult(customerService);
-				break;
-			}
-			case "4": {
-				deleteCustomer(customerService);
-				break;
-			}
-			case "5": {
-				return;
-			}
-			default:
-				System.out.println("Invalid input.");
+			try {
+				switch (type) {
+				case "1": {
+					addCustomer(customerService);
+					break;
+				}
+				case "2": {
+					displayCustomers(customerService);
+					break;
+				}
+				case "3": {
+					displaySearchResult(customerService);
+					break;
+				}
+				case "4": {
+					deleteCustomer(customerService);
+					break;
+				}
+				case "5": {
+					return;
+				}
+				default:
+					System.out.println("Invalid input.");
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 	}
