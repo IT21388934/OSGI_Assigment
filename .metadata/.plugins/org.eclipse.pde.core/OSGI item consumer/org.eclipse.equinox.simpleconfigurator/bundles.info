@@ -1,7 +1,7 @@
 #encoding=UTF-8
 #version=1
-ItemConsumer,1.0.0.qualifier,file:/F:/SLIIT/3Y2SEM/SoftwareAchitecture/Assigment01/OurGroup/ItemConsumer/,4,true
-ServicePublisher,1.0.0.qualifier,file:/F:/SLIIT/3Y2SEM/SoftwareAchitecture/Assigment01/OurGroup/ServicePublisher/,4,true
+ItemConsumer,1.0.0.qualifier,file:/F:/SLIIT/3Y2SEM/SoftwareAchitecture/Assigment01/orginal/OSGI_Assigment/ItemConsumer/,4,true
+ServicePublisher,1.0.0.qualifier,file:/F:/SLIIT/3Y2SEM/SoftwareAchitecture/Assigment01/orginal/OSGI_Assigment/ServicePublisher/,4,true
 bcpg,1.77.0,file:/C:/Users/DELL/.p2/pool/plugins/bcpg_1.77.0.jar,4,true
 bcpkix,1.77.0,file:/C:/Users/DELL/.p2/pool/plugins/bcpkix_1.77.0.jar,4,true
 bcprov,1.77.0,file:/C:/Users/DELL/.p2/pool/plugins/bcprov_1.77.0.jar,4,true
