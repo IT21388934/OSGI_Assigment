@@ -19,7 +19,7 @@ public class ItemConsumerActivator implements BundleActivator {
 	Scanner sc = new Scanner(System.in);
 
 	public void start(BundleContext context) throws Exception {
-		System.out.println("Item Consumer bundle started.");
+		System.out.println("===========================Item Consumer bundle started.============================");
 		
 		
 		// Obtain a service reference for the ItemProcedure class
@@ -35,6 +35,7 @@ public class ItemConsumerActivator implements BundleActivator {
 		// Enter a loop that continues as long as the "running" flag is true
 		while (running) {
 		    // Display a menu of options for the user
+			System.out.println("============Welcome to Item Mangement====================");
 		    System.out.println("Choose an option:");
 		    System.out.println("1. View All Items");
 		    System.out.println("2. Add Item");
@@ -124,8 +125,8 @@ public class ItemConsumerActivator implements BundleActivator {
 	}
 	
 	public void uninstall(BundleContext context) throws Exception{
-		System.out.println("Good Bye");
-		context.ungetService(serviceReference);
+		System.out.println("===========Good Bye==========");
+		context.getBundle().stop();
 	}
 
 }
